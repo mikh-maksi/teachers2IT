@@ -2,17 +2,16 @@ function check_f() {
     let a_val = parseInt(a.value);
     let b_val = parseInt(b.value);
     let compare_val = compare.value;
+
     let result = 0;
+
     if ((a_val > b_val) && (compare_val == '>')) {
-        console.log("Ok");
         result = 1;
     }
     if ((a_val < b_val) && (compare_val == '<')) {
-        console.log("Ok");
         result = 1;
     }
     if ((a_val == b_val) && (compare_val == '=')) {
-        console.log("Ok");
         result = 1;
     }
 
@@ -22,12 +21,12 @@ function check_f() {
         alert("Wrong Answer!");
     }
 
-    console.log(a_val, b_val, compare_val);
 
+    console.log(a_val, b_val, compare_val);
+    new_f();
 }
 
 function new_f() {
-    console.log("new");
     a.value = getRandomInt(10);
     b.value = getRandomInt(10);
 }
@@ -35,6 +34,9 @@ function new_f() {
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
+
+
+
 
 b_check.addEventListener("click", check_f);
 b_new.addEventListener("click", new_f);
