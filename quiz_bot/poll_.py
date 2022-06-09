@@ -31,13 +31,13 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 def strt():
-    f = open('/Users/mac/Documents/work/teachers2IT/quiz_bot/poll_data.csv','w')
+    f = open('poll_data.csv','w')
     f.close()
 
 
 
 def fl(username,firstname,lastname,fid,answer):
-    f = open('/Users/mac/Documents/work/teachers2IT/quiz_bot/poll_data.csv','a')
+    f = open('poll_data.csv','a')
     file_out = f"{username};{firstname};{lastname};{fid};{answer};"
     print("CSV")
     print(file_out)
@@ -45,11 +45,12 @@ def fl(username,firstname,lastname,fid,answer):
     f.close()
 
 
+def file_(update, _):
+    strt():
 
 
 def start(update, _):
     """Информация о том, что может сделать этот бот"""
-    strt()
     update.message.reply_text(
         'Введите `/poll` для участия в опросе'
     )
@@ -123,7 +124,8 @@ def receive_poll_answer(update, context):
 if __name__ == '__main__':
     updater = Updater("")
     dispatcher = updater.dispatcher
-    dispatcher.add_handler(CommandHandler('start', start))
+    dispatcher.add_handler(CommandHandler('start', start))    
+    dispatcher.add_handler(CommandHandler('file_', start))
 
     dispatcher.add_handler(CommandHandler('poll', poll))
     dispatcher.add_handler(PollAnswerHandler(receive_poll_answer))
