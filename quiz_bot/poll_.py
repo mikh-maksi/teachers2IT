@@ -46,7 +46,7 @@ def fl(username,firstname,lastname,fid,answer):
 
 
 def file_(update, _):
-    strt():
+    strt()
 
 
 def start(update, _):
