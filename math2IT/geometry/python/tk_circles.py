@@ -15,7 +15,7 @@ c.create_line(100, 200, 100, 0, fill='green',
                 activefill='lightgreen',
                 arrowshape="10 20 10")
 
-c.create_oval(50, 10, 150, 110, width=2)
+c.create_oval(55, 10, 145, 100, width=2)
 c.create_oval(10, 120, 190, 190, fill='grey70', outline='white')
  
 root.mainloop()

@@ -18,7 +18,7 @@ c.create_line(3, 3, 3, 200, fill='green',
                 arrowshape="10 20 10")
 
 
-c.create_rectangle(60, 80, 140, 190, fill='yellow', outline='green',
+c.create_rectangle(20, 20, 140, 190, fill='yellow', outline='green',
                     width=3, activedash=(5, 4))
  
 root.mainloop()
