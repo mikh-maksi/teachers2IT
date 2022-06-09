@@ -121,7 +121,7 @@ def receive_poll_answer(update, context):
 
 
 if __name__ == '__main__':
-    updater = Updater("5101987677:AAHm9vcl71p0-h_ZdIX6Clcfb3hbcdhTec8")
+    updater = Updater("")
     dispatcher = updater.dispatcher
     dispatcher.add_handler(CommandHandler('start', start))
 
